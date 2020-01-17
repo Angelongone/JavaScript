@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+</head>
+<body>
+    <script>
+        /*
+        setTimeout():在指定的毫秒数后调用函数或计算表达式。
+            *参数：
+                1、js代码或方法对象
+                2、毫秒值
+            *返回值：
+                返回唯一标识，用于取消定时器
+        clearTimeout():取消有setTimeout()方法设置的timeout
+
+        setInterval():按照指定的周期（以毫秒计）来调用函数或计算表达式。
+        clearInterval():取消由setInterval()设置timeout
+        */
+        //一次性定时器
+        var id = setTimeout("fun();",2000);
+        //关闭一次性定时器
+        clearTimeout(id);
+        //循环定时器
+        var id2 = setInterval(fun,2000);
+        //关闭循环定时器
+        clearInterval(id2);
+        function fun(){
+            alert('boom ~~~~');
+        }
+    </script>
+
+</body>
+</html>

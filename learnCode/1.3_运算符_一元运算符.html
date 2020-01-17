@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>一元运算符</title>
+</head>
+
+<body>
+	<script>
+		/*
+		1、一元运算符：只有一个运算数的运算符
+			++，-- +（正号），-（负号）
+			++ -- 自增（自减）
+		注意：在js中，如果运算数不是运算符所要求的类型，那么js引擎会自动的将运算数进行类型转换
+			*其它类型转换number：
+				string转number：按照字面值转换，如果字面值不是数字，则转换为NaN（不是数字的数字）
+				Boolean转number：true转换1，false转为0
+		*/
+		
+		var num = 3;
+		var a = ++num ;
+		
+		document.write(num);
+		document.write(a);
+		document.write("<hr>");
+		
+		var b = +"123abc";
+		document.write(typeof(b));
+		document.write(b + 1);
+		document.write("<hr>");
+		
+		var flag = +true;
+		var f2 = +false;
+		document.write(typeof(flag) + "<br>");
+		document.write(flag + "<br>");
+		document.write(f2 + "<br>");
+	</script>
+</body>
+</html>

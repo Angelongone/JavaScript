@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Location对象</title>
+</head>
+<body>
+    <input type="button" id="btn" value="刷新">
+    <input type="button" id="go" value="去主页">
+    <script>
+        //reload方法，定义一个按钮，点击，刷新当前页面
+        //1、获取按钮
+        var btn = document.getElementById("btn");
+        //2、绑定单击事件
+        btn.onclick = function(){
+            //3、刷新页面
+            location.reload();
+        }
+
+        //获取href
+        var href = location.href;
+        //alert(href);
+        //点击按钮，去访问www.angelong.top
+        //1、获取按钮
+        var goAngelong = document.getElementById("go");
+        //2、绑定点击事件
+        goAngelong.onclick = function(){
+            //访问www.angelong.top
+            location.href = "http://www.angelong.top";
+        }
+
+    </script>
+
+</body>
+</html>
